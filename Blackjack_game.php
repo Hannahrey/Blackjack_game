@@ -60,24 +60,19 @@ $deck = [
 ];
 function draw_card($deck) {
     $random_suit = array_rand($deck);
-    $random_card = array_rand($random_suit);
+    $random_card = array_rand($deck[$random_suit]);
+    $selected_card = [
+        'name' => $random_card . ' of ' . $random_suit,
+        'score' => $deck[$random_suit][$random_card],
+    ];
+    unset($deck[$random_suit][$random_card]);
+    return $selected_card;
 };
 
-draw_card($deck);
 
-echo '<pre>';
-var_dump($deck);
-echo '</pre>';
+$card_drawn = draw_card($deck);
 
-//function select_card($deck){
-//
-//    $card1 = array_pop($deck);
-//
-//};
-//
-//select_card($deck);
-
-
+$player1_score =
 
 
 
