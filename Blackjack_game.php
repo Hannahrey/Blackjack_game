@@ -2,57 +2,57 @@
 
 $card_deck = [
     'Hearts' => [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
+        2 => 2,
+        3 => 3,
+        4 => 4,
+        5 => 5,
+        6 => 6,
+        7 => 7,
+        8 => 8,
+        9 => 9,
+        10 => 10,
         'Jack' => 10,
         'Queen'=> 10,
         'King' => 10,
         'Ace'=> 11],
     'Clubs' => [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
+        2 => 2,
+        3 => 3,
+        4 => 4,
+        5 => 5,
+        6 => 6,
+        7 => 7,
+        8 => 8,
+        9 => 9,
+        10 => 10,
         'Jack' => 10,
         'Queen'=> 10,
         'King'=> 10,
         'Ace'=> 11],
     'Spades' => [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
+        2 => 2,
+        3 => 3,
+        4 => 4,
+        5 => 5,
+        6 => 6,
+        7 => 7,
+        8 => 8,
+        9 => 9,
+        10 => 10,
         'Jack' => 10,
         'Queen'=> 10,
         'King'=> 10,
         'Ace'=> 11],
     'Diamonds' => [
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
+        2 => 2,
+        3 => 3,
+        4 => 4,
+        5 => 5,
+        6 => 6,
+        7 => 7,
+        8 => 8,
+        9 => 9,
+        10 => 10,
         'Jack' => 10,
         'Queen'=> 10,
         'King'=> 10,
@@ -67,11 +67,19 @@ foreach ($card_deck as $suit) {
     shuffle($suit);
 };
 
-$card = array_slice($suit, 0, 12);
+$card1 = array_slice($suit, 0, 1);
 
+
+shuffle($card_deck);
+
+foreach ($card_deck as $suit) {
+    shuffle($suit);
+};
+
+$card2 = array_slice($suit, 0, 1);
 
 echo '<pre>';
-var_dump($card);
+var_dump($card1, $card2);
 echo '</pre>';
 
 
