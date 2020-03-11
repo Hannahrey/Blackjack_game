@@ -130,15 +130,8 @@ if ($player1_score >= $player2_score && $player1_score < 22) {
     echo 'Player 1 wins';
 } else if ($player2_score >= $player1_score && $player1_score < 22) {
     echo 'Player 2 wins';
-} else if ($player1_score == $player2_score && <= 21) {
+} else if ($player1_score == $player2_score) {
     echo 'You draw';
     }
-};
 
-
-//echo '<pre>';
-//var_dump($card_deck);
-//echo '</pre>';
-//
-//return shuffle($card_deck);
 
