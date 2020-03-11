@@ -1,6 +1,6 @@
 <?php
 
-$card_deck = [
+$deck = [
     'Hearts' => [
         2 => 2,
         3 => 3,
@@ -58,57 +58,30 @@ $card_deck = [
         'King'=> 10,
         'Ace'=> 11],
 ];
-
-
-
-shuffle($card_deck);
-
-foreach ($card_deck as $suit) {
-    shuffle($suit);
+function draw_card($deck) {
+    $random_suit = array_rand($deck);
+    $random_card = array_rand($random_suit);
 };
 
-$card1 = array_slice($suit, 0, 1);
-
-
-shuffle($card_deck);
-
-foreach ($card_deck as $suit) {
-    shuffle($suit);
-};
-
-$card2 = array_slice($suit, 0, 1);
+draw_card($deck);
 
 echo '<pre>';
-var_dump($card1, $card2);
+var_dump($deck);
 echo '</pre>';
 
-
-
+//function select_card($deck){
 //
-//echo '<pre>';
-//var_dump($card_deck);
-//echo '</pre>';
+//    $card1 = array_pop($deck);
 //
-
-
+//};
 //
-//shuffle($suit);
-//foreach ($suit as $card) {
-//    echo $card;
-//
-//
-//$get_card();
-//
+//select_card($deck);
 
 
 
-//
-//shuffle($card_deck);
-//echo '<pre>';
-//var_dump($card_deck);
-//echo '</pre>';
-//
-//
+
+
+
 //$player1_score =
 //
 //
