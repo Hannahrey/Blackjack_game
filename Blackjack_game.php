@@ -59,19 +59,59 @@ $card_deck = [
         'Ace'=> 11],
 ];
 
-$random_deck= array_rand($card_deck, 2);
-echo $random_deck();
 
 
+shuffle($card_deck);
 
-if ($player1_score >= $player2_score && <= 21) {
-    echo 'Player 1 wins';
-} else if ($player2_score >= $player1_score && <= 21) {
-    echo 'Player 2 wins';
-} else if ($player1_score == $player2_score && <= 21) {
-    echo 'You draw';
-    }
+foreach ($card_deck as $suit) {
+    shuffle($suit);
 };
+
+$card = array_slice($suit, 0, 12);
+
+
+echo '<pre>';
+var_dump($card);
+echo '</pre>';
+
+
+
+//
+//echo '<pre>';
+//var_dump($card_deck);
+//echo '</pre>';
+//
+
+
+//
+//shuffle($suit);
+//foreach ($suit as $card) {
+//    echo $card;
+//
+//
+//$get_card();
+//
+
+
+
+//
+//shuffle($card_deck);
+//echo '<pre>';
+//var_dump($card_deck);
+//echo '</pre>';
+//
+//
+//$player1_score =
+//
+//
+//if ($player1_score >= $player2_score && <= 21) {
+//    echo 'Player 1 wins';
+//} else if ($player2_score >= $player1_score && <= 21) {
+//    echo 'Player 2 wins';
+//} else if ($player1_score == $player2_score && <= 21) {
+//    echo 'You draw';
+//    }
+//};
 
 
 //echo '<pre>';
