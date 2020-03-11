@@ -123,15 +123,15 @@ $selected_card4 = draw_card4($deck);
 echo $selected_card4['score'] . '<br>';
 
 $player2_score = $selected_card3['score'] + $selected_card4['score'];
-echo 'Total score for Player 2: ' .  $player2_score;
+echo 'Total score for Player 2: ' .  $player2_score . '<br>';
 
 
-if ($player1_score >= $player2_score && $player1_score < 22) {
-    echo 'Player 1 wins';
-} else if ($player2_score >= $player1_score && $player1_score < 22) {
-    echo 'Player 2 wins';
+if ($player1_score > $player2_score && $player1_score < 22) {
+    echo '<br>' . '<h1>'. 'Player 1 wins' .'</h1>';
+} else if ($player2_score > $player1_score && $player2_score < 22) {
+    echo '<br>' . '<h1>'. 'Player 2 wins' .'</h1>';
 } else if ($player1_score == $player2_score) {
-    echo 'You draw';
-    }
+    echo '<br>' . '<h1>'. 'You draw!' .'</h1>';
+}
 
 
